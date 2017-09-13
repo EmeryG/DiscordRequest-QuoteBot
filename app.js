@@ -201,6 +201,7 @@ client.on("messageReactionAdd", function(messageReaction, user) {
                         "Sales Rep: " + biz.rep + "\n" +
                         "━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
                 });
+                client.channels.get(managementOdrs).send("Order ID " + biz.id + " has been taken!");
                 biz.user.send("Thanks for ordering! I'll add you into a chat to discuss with the CEO and your servicer. Message me again if you'd like to order again.");
                 if(biz.state == 2) {
                     biz.rep = "N/A";
